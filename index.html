@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioEsencia | Cuidado Personal Residuo Cero</title>
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind para colores personalizados y fuentes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tierra: {
+                            50: '#f9f6f0',
+                            100: '#f0eadd',
+                            200: '#e0d1bc',
+                            800: '#5c4a3d',
+                            900: '#4a3b31'
+                        },
+                        bosque: {
+                            50: '#f2f7f4',
+                            500: '#4ade80',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados adicionales */
+        .hero-pattern {
+            background-color: #14532d;
+            background-image: radial-gradient(#166534 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-tierra-50 text-gray-800 antialiased selection:bg-bosque-500 selection:text-white">
+
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-bosque-700 text-2xl"></i>
+                    <span class="font-serif font-semibold text-2xl text-bosque-900">BioEsencia</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-bosque-700 transition font-medium">Inicio</a>
+                    <a href="#problema" class="text-gray-600 hover:text-bosque-700 transition font-medium">El Problema</a>
+                    <a href="#propuesta" class="text-gray-600 hover:text-bosque-700 transition font-medium">Nuestra Propuesta</a>
+                    <a href="#proposito" class="text-gray-600 hover:text-bosque-700 transition font-medium">Propósito</a>
+                    <a href="#equipo" class="text-gray-600 hover:text-bosque-700 transition font-medium">Equipo</a>
+                </div>
+                <!-- Menú móvil (oculto por defecto) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-bosque-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú desplegable móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#inicio" class="block px-4 py-3 text-gray-600 hover:bg-bosque-50 hover:text-bosque-800">Inicio</a>
+            <a href="#problema" class="block px-4 py-3 text-gray-600 hover:bg-bosque-50 hover:text-bosque-800">El Problema</a>
+            <a href="#propuesta" class="block px-4 py-3 text-gray-600 hover:bg-bosque-50 hover:text-bosque-800">Nuestra Propuesta</a>
+            <a href="#proposito" class="block px-4 py-3 text-gray-600 hover:bg-bosque-50 hover:text-bosque-800">Propósito</a>
+            <a href="#equipo" class="block px-4 py-3 text-gray-600 hover:bg-bosque-50 hover:text-bosque-800">Equipo</a>
+        </div>
+    </nav>
+
+    <header id="inicio" class="relative pt-20 pb-32 lg:pt-32 lg:pb-40 overflow-hidden bg-bosque-900 hero-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-bosque-900/90"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bosque-800/50 border border-bosque-500/30 text-green-100 text-sm font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Proyecto Empresarial - Grado 11
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 drop-shadow-md">
+                Cuidado Personal <br><span class="text-tierra-200">Residuo Cero</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-green-50 max-w-2xl mx-auto font-light">
+                "Menos plástico, más vida."
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#propuesta" class="px-8 py-4 bg-tierra-200 text-tierra-900 rounded-full font-semibold hover:bg-white transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Descubre nuestros productos
+                </a>
+                <a href="#problema" class="px-8 py-4 bg-transparent border border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition">
+                    Conoce el impacto
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="problema" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-serif text-bosque-900 mb-4">La Realidad de Nuestro Consumo</h2>
+                <div class="w-24 h-1 bg-bosque-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">
+                    La industria de la cosmética tradicional ha dejado una huella imborrable en nuestro planeta. Es hora de despertar y cambiar nuestros hábitos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-tierra-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform text-bosque-700">
+                        <i class="fa-solid fa-bottle-water text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Millones de Botellas</h3>
+                    <p class="text-gray-600">
+                        Cada año se desechan millones de envases plásticos de champú, jabón líquido y cremas, los cuales terminan en vertederos.
+                    </p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="bg-tierra-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform text-bosque-700">
+                        <i class="fa-solid fa-water text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Contaminación del Agua</h3>
+                    <p class="text-gray-600">
+                        Los microplásticos y químicos agresivos de los productos convencionales se filtran en ríos y océanos, dañando irreparablemente los ecosistemas.
+                    </p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="bg-tierra-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform text-bosque-700">
+                        <i class="fa-solid fa-hourglass-half text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Impacto a Largo Plazo</h3>
+                    <p class="text-gray-600">
+                        Los plásticos de un solo uso tardan cientos de años en degradarse, dejando una carga tóxica para las futuras generaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="propuesta" class="py-20 bg-bosque-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <!-- Imagen de reemplazo para los productos sólidos -->
+                        <img src="https://placehold.co/600x600/166534/ffffff?text=Cosmética+Sólida\nNatural" alt="Jabones naturales" class="rounded-3xl shadow-xl w-full object-cover aspect-square">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg hidden md:block">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-green-100 p-3 rounded-full text-green-600">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">100%</p>
+                                    <p class="text-sm text-gray-500">Natural & Vegano</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-serif text-bosque-900 mb-6">Nuestra Propuesta Limpia</h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        En BioEsencia creemos que cuidar de ti no debe significar descuidar al planeta. Ofrecemos alternativas sostenibles que transforman tu rutina de baño.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-bosque-200 text-bosque-800 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-soap"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">Cosmética Sólida</h4>
+                                <p class="text-gray-600 mt-1">Jabones y exfoliantes en formato sólido. Concentrados, duraderos y sin necesidad de envases plásticos.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-bosque-200 text-bosque-800 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-droplet"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">Fórmulas Puras</h4>
+                                <p class="text-gray-600 mt-1">Ingredientes naturales de alta calidad, libres de químicos abrasivos, parabenos y microplásticos que dañan tu piel y el agua.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-bosque-200 text-bosque-800 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-box-open"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">Empaques Ecológicos</h4>
+                                <p class="text-gray-600 mt-1">Garantizamos cero plástico. Utilizamos materiales biodegradables, compostables o reutilizables para envolver nuestros productos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proposito" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-serif text-bosque-900 mb-4">Nuestro Propósito</h2>
+                <div class="w-24 h-1 bg-bosque-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Misión -->
+                <div class="bg-tierra-100 p-10 rounded-[2rem] border border-tierra-200 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-bullseye text-9xl text-tierra-800"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                            <i class="fa-solid fa-rocket text-tierra-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-tierra-900 mb-4">Nuestra Misión</h3>
+                        <p class="text-tierra-900/80 text-lg leading-relaxed">
+                            Ofrecer productos de higiene personal verdaderamente ecológicos, libres de plásticos y tóxicos, fomentando un consumo responsable y consciente que proteja la salud de nuestros clientes y preserve el medio ambiente para las generaciones venideras.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Visión -->
+                <div class="bg-bosque-800 p-10 rounded-[2rem] relative overflow-hidden group text-white">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-regular fa-eye text-9xl text-white"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-bosque-700 rounded-full flex items-center justify-center mb-6 shadow-sm border border-bosque-600">
+                            <i class="fa-solid fa-lightbulb text-tierra-200 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-tierra-100 mb-4">Nuestra Visión</h3>
+                        <p class="text-bosque-50/80 text-lg leading-relaxed">
+                            Ser el emprendimiento escolar referente en la Institución Educativa Técnica Ciudad de Cali y en nuestra comunidad, destacados por la innovación constante en el cuidado personal sostenible y por inspirar a otros jóvenes a crear negocios con impacto positivo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="py-20 bg-tierra-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-bosque-700 font-semibold tracking-wider uppercase text-sm">Quienes somos</span>
+                <h2 class="text-3xl font-serif text-bosque-900 mt-2 mb-4">El Equipo BioEsencia</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Estudiantes de Grado 11 - Institución Educativa Técnica Ciudad de Cali.<br> Jóvenes comprometidos con el medio ambiente y el emprendimiento.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Miembro 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-24 h-24 bg-tierra-200 rounded-full mx-auto mb-4 flex items-center justify-center text-tierra-800 text-3xl">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Ahilyn Arroyo</h3>
+                    <p class="text-bosque-600 text-sm font-medium mb-3">Co-fundadora</p>
+                </div>
+                <!-- Miembro 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-24 h-24 bg-tierra-200 rounded-full mx-auto mb-4 flex items-center justify-center text-tierra-800 text-3xl">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Sebastián Enriquez</h3>
+                    <p class="text-bosque-600 text-sm font-medium mb-3">Co-fundador</p>
+                </div>
+                <!-- Miembro 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-24 h-24 bg-tierra-200 rounded-full mx-auto mb-4 flex items-center justify-center text-tierra-800 text-3xl">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Thomas Furque</h3>
+                    <p class="text-bosque-600 text-sm font-medium mb-3">Co-fundador</p>
+                </div>
+                <!-- Miembro 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-24 h-24 bg-tierra-200 rounded-full mx-auto mb-4 flex items-center justify-center text-tierra-800 text-3xl">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Danna García</h3>
+                    <p class="text-bosque-600 text-sm font-medium mb-3">Co-fundadora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer class="bg-bosque-900 text-white pt-16 pb-8 border-t-4 border-bosque-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-bosque-500 text-2xl"></i>
+                        <span class="font-serif font-semibold text-2xl">BioEsencia</span>
+                    </div>
+                    <p class="text-bosque-100/80 mb-6">
+                        Cuidado Personal Residuo Cero. Menos plástico, más vida. Proyecto empresarial escolar enfocado en la sostenibilidad.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-tierra-200">Institución</h4>
+                    <ul class="space-y-2 text-bosque-100/80">
+                        <li><i class="fa-solid fa-school mr-2"></i> I.E. Técnica Ciudad de Cali</li>
+                        <li><i class="fa-solid fa-graduation-cap mr-2"></i> Grado Once</li>
+                        <li><i class="fa-solid fa-briefcase mr-2"></i> Feria Empresarial 2026</li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-bosque-100/60 text-sm">
+                <p>&copy; 2026 BioEsencia. Proyecto Escolar - Institución Educativa Técnica Ciudad de Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica simple para el menú hamburguesa en móvil
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace (móvil)
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>```
